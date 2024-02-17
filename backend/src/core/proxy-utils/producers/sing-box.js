@@ -179,7 +179,7 @@ const grpcParser = (proxy, parsedProxy) => {
     if (proxy['grpc-opts']) {
         const serviceName = proxy['grpc-opts']['grpc-service-name'];
         if (serviceName && serviceName !== '')
-            transport.service_name = serviceName;
+            transport.service_name = `${serviceName}`;
     }
     parsedProxy.transport = transport;
 };
